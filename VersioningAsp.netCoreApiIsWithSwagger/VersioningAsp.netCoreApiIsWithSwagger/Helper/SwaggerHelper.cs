@@ -62,10 +62,7 @@ namespace VersioningAsp.netCoreApiIsWithSwagger.Helper
                 }
                 else if (SwaggerConfig.CurrentVersioningMethod == VersioningType.AcceptHeader && !context.ApiDescription.RelativePath.Contains("{version}"))
                 {
-                    ///  operation.Parameters.Add(new OpenApiParameter { Name = "Accept", In = ParameterLocation.Header, Schema = new OpenApiSchema { Type = "String", Default = new OpenApiString($"application/json;{SwaggerConfig.AcceptHeaderParam}=" + version.ToString()) } });
-                    //  operation.Parameters.Add(new OpenApiParameter { Name = "Accept", In = ParameterLocation.Header, Required = false, Schema = new OpenApiSchema { Type = "String", Default = new OpenApiString($"application/json;{SwaggerConfig.AcceptHeaderParam}=" + version.ToString()) } });
-                    var acceptHeaderText = "application/json;v=" + version.ToString();
-            var BODY=operation.RequestBody;
+
                    operation.Parameters.Add(new OpenApiParameter { Name = "Accept", In = ParameterLocation.Header, Required = false, Schema = new OpenApiSchema { Type = "String", Default = new OpenApiString($"application/json;{SwaggerConfig.AcceptHeaderParam}=" + version.ToString()) } });
 
                 }

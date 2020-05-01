@@ -30,8 +30,8 @@ namespace VersioningAsp.netCoreApiIsWithSwagger
             config.AssumeDefaultVersionWhenUnspecified = true;
 
 
-                //config.ApiVersionReader = new QueryStringApiVersionReader("api-version");
-                //SwaggerConfig.UseQueryStringApiVersion("api-version");
+                config.ApiVersionReader = new QueryStringApiVersionReader("api-version");
+                SwaggerConfig.UseQueryStringApiVersion("api-version");
 
 
                 //config.ApiVersionReader = new HeaderApiVersionReader("X-Version");
